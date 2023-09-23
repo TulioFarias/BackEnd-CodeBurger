@@ -10,11 +10,11 @@ const models = [User, Product, Category]
 class Database {
     constructor(){
         this.init()
-        this.mongo()
+        // this.mongo()
     }
 
     init(){
-        this.connection = new Sequelize('postgresql://postgres:qDIRHx365DmA9wrKHCN9@containers-us-west-194.railway.app:6986/railway')
+        this.connection = new Sequelize(configDatabase)
         models.map(model => model.init(this.connection)).
         map( model => model.associate && model.associate (this.connection.models))
     }
