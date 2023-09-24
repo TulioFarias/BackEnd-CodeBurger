@@ -6,7 +6,7 @@
   "license": "ISC",
   "scripts": {
     "test": "echo \"Error: no test specified\" jest",
-    "start": "nodemon src/server.js",
+    "start": "node src/server.js",
     "dev": "nodemon src/server.js",
     "debug": "nodemon --inspect"
   },
@@ -28,6 +28,7 @@
     "yup": "^1.2.0"
   },
   "devDependencies": {
+    "nodemon": "^3.0.1",
     "eslint": "^8.0.1",
     "eslint-config-prettier": "^9.0.0",
     "eslint-config-standard": "^17.1.0",
