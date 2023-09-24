@@ -14,13 +14,13 @@ class Database {
     }
 
     init(){
-        this.connection = new Sequelize('postgresql://postgres:vZigtZ0ikEcPdtKWNmpm@containers-us-west-123.railway.app:6680/railway')
+        this.connection = new Sequelize('postgresql://postgres:m44U6mMnomRdGohrTh4o@containers-us-west-129.railway.app:8019/railway')
         models.map(model => model.init(this.connection)).
         map( model => model.associate && model.associate (this.connection.models))
     }
 
 mongo(){
-        this.mongoConnection = mongoose.connect('mongodb://mongo:qxzmEnLsbbVmXnN4XI8k@containers-us-west-81.railway.app:5850', {
+        this.mongoConnection = mongoose.connect('mongodb://mongo:23GqdxvcbVc8ZBH0SWXQ@containers-us-west-133.railway.app:6438', {
                 useNewUrlParser: true,
             useUnifiedTopology: true,
         })
