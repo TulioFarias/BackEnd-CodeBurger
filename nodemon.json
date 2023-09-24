@@ -1,5 +1,6 @@
 
-{  
+{
+"clearCache": true,  
 "allow-all": true,
 "verbose": true,
 "ignore": [

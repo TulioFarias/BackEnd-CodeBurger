@@ -1,0 +1,7 @@
+
+name = "BackEnd-CodeBurger"
+[env.production]
+[env.staging]
+
+[build] 
+  environment = { "PATH" = "/app/.bin:$PATH" }
