@@ -1,7 +1,7 @@
 "use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }var _express = require('express'); var _express2 = _interopRequireDefault(_express);
 var _routesjs = require('./routes.js'); var _routesjs2 = _interopRequireDefault(_routesjs);
 var _path = require('path');
-require('./database/index.js');
+require('./database');
 var _cors = require('cors'); var _cors2 = _interopRequireDefault(_cors);
 
 class App {
@@ -16,9 +16,9 @@ class App {
 
   middlewares() {
     this.app.use(_express2.default.json());
-    this.app.use('/product-file', _express2.default.static(_path.resolve.call(void 0, process.cwd(), '..', 'uploads'))
+    this.app.use('/product-file', _express2.default.static(_path.resolve.call(void 0, __dirname, '..', 'uploads'))
     )
-    this.app.use('/category-file', _express2.default.static(_path.resolve.call(void 0, process.cwd(), '..', 'uploads')))
+    this.app.use('/category-file', _express2.default.static(_path.resolve.call(void 0, __dirname, '..', 'uploads')))
   }
 
   routes() {
