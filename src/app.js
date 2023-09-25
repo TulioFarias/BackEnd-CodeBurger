@@ -1,7 +1,7 @@
 import express from "express";
 import routes from "./routes.js";
 import {resolve} from 'path'
-// import './database'
+import './database'
 import cors from 'cors'
 
 class App {
