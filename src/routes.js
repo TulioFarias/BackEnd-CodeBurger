@@ -1,13 +1,14 @@
 import { Router } from "express";
 import multer from "multer";
-import multerConfig from './config/multer'
-import UserController from "./app/controllers/UserController";
-import SessionContoller from "./app/controllers/SessionContoller";
-import ProductController from "./app/controllers/ProductController";
+import multerConfig from './config/multer.js'
+import UserController from "./app/controllers/UserController.js";
+import SessionContoller from "./app/controllers/SessionContoller.js";
+import ProductController from "./app/controllers/ProductController.js";
 
-import authMiddleware from './app/middlewares/auth'
-import CategoryController from "./app/controllers/CategoryController";
-import OrderController from "./app/controllers/OrderController";
+
+import authMiddleware from './app/middlewares/auth.js'
+import CategoryController from "./app/controllers/CategoryController.js";
+import OrderController from "./app/controllers/OrderController.js";
 
 const upload = multer(multerConfig)
 const routes = new Router();
