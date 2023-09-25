@@ -1,7 +1,7 @@
 import express from "express";
 import routes from "./routes.js";
 import {resolve} from 'path'
-import './database/index.js'
+import './database'
 import cors from 'cors'
 
 class App {
@@ -16,9 +16,9 @@ class App {
 
   middlewares() {
     this.app.use(express.json());
-    this.app.use('/product-file', express.static(resolve (process.cwd(), '..', 'uploads'))
+    this.app.use('/product-file', express.static(resolve (__dirname, '..', 'uploads'))
     )
-    this.app.use('/category-file', express.static(resolve (process.cwd(), '..', 'uploads')))
+    this.app.use('/category-file', express.static(resolve (__dirname, '..', 'uploads')))
   }
 
   routes() {
