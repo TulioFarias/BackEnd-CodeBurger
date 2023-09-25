@@ -4,10 +4,11 @@
   "description": "",
   "main": "src/server.js",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
+
   "scripts": {
     "test": "echo \"Error: no test specified\" jest",
-    "start": "node  ./src/server.js",
+    "start": "node ./src/server.js",
     "dev": "nodemon src/server.js",
     "debug": "nodemon --inspect"
   },
