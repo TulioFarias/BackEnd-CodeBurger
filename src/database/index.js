@@ -10,7 +10,7 @@ const models = [User, Product, Category]
 class Database {
     constructor(){
         this.init()
-        // this.mongo()
+        this.mongo()
     }
 
     init(){
@@ -20,7 +20,7 @@ class Database {
     }
 
 mongo(){
-        this.mongoConnection = mongoose.connect('mongodb://mongo:23GqdxvcbVc8ZBH0SWXQ@containers-us-west-133.railway.app:6438', {
+        this.mongoConnection = mongoose.connect('mongodb://mongo:q1iGoHaZDriurOSN5qW6@containers-us-west-162.railway.app:7642', {
                 useNewUrlParser: true,
             useUnifiedTopology: true,
         })
