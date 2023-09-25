@@ -13,7 +13,7 @@ class Product extends Model{
                     url: {
                         type: Sequelize.VIRTUAL,
                         get(){
-                            return `http://localhost:3001/product-file/${this.path}`
+                            return `https://apicodeburger.cyclic.app/product-file/${this.path}`
                         },
                     },
                 },
