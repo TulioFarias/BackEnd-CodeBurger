@@ -4,12 +4,12 @@
   "description": "",
   "main": "src/server.js",
   "license": "ISC",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" jest",
-    "start": "node ./src/server.js",
+    "start": "node dist/server.js",
     "dev": "nodemon src/server.js",
-    "debug": "nodemon --inspect"
+    "debug": "nodemon --inspect",
+    "build": "sucrase ./src -d ./dist --transform imports"
   },
   "keywords": [],
   "author": "",
